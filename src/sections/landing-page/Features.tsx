@@ -1,8 +1,5 @@
 "use client";
 
-import ArrowIcon from "@/assets/arrow-right.svg";
-import { DemoButton, Orbit } from "@/components";
-import Logo from "@/assets/logosaas.png";
 import Image from "next/image";
 import slackLogo from "@/assets/slack-logo.png";
 import dockerLogo from "@/assets/docker-logo.png";
@@ -13,7 +10,9 @@ import notionLogo from "@/assets/notion-logo.png";
 import jiraLogo from "@/assets/jira-logo.png";
 import gcpLogo from "@/assets/gcp-logo.png";
 
-import { motion } from "framer-motion";
+import ProductImage from "@/assets/product-image.png";
+
+import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 
 export const logos = [
   {
@@ -60,118 +59,62 @@ export const logos = [
 
 export const Features = () => {
   return (
-    <section className="pt-8 pb-20 md:pt-20 md:pb-40">
+    <section className="pt-8 pb-20 md:pt-20 md:pb-0">
       <div className="container">
         <div className="flex justify-center">
           <div className="tag">Features</div>
         </div>
-        <div className="lg:flex flex-row-reverse justify-between items-center">
-          <div className="md:w-[535px]">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
-              See how Identity Management works firsthand
-            </h1>
-            <p className="text-xl text-[#010D3E] tracking-tight mt-6">
-              Explore how Identity Management can support the needs of your
-              modern enterprise. See why an intelligent, autonomous identity
-              foundation makes a difference and how the flexibility of our
-              product drives success.
-            </p>
-            {/* <div className="flex gap-1 items-center mt-[30px]">
+
+        <div className="flex flex-col-reverse lg:flex-row justify-between">
+          <ContainerScroll>
+            <div className="relative w-full h-full overflow-hidden rounded-2xl">
+              <Image
+                src={ProductImage}
+                alt="hero"
+                className="h-[310px] relative -top-3 left-0 object-cover w-full blur-[1px]"
+                draggable={false}
+              />
+              <div className="absolute inset-0 flex items-center justify-center">
+                <button
+                  className="flex items-center justify-center w-20 h-20 bg-red-600 rounded-full shadow-lg hover:bg-red-700 focus:outline-none"
+                  aria-label="Play YouTube Video"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    className="w-12 h-12 text-white"
+                  >
+                    <path d="M10 15l5-3-5-3v6z" />
+                    <path
+                      fillRule="evenodd"
+                      d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-8 10c0-4.418 3.582-8 8-8s8 3.582 8 8-3.582 8-8 8-8-3.582-8-8z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </ContainerScroll>
+
+          <div className="lg:flex flex-row-reverse justify-between items-center">
+            <div className="md:w-[535px]">
+              <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
+                See how Identity Management works firsthand
+              </h1>
+              <p className="text-xl text-[#010D3E] tracking-tight mt-6">
+                Explore how Identity Management can support the needs of your
+                modern enterprise. See why an intelligent, autonomous identity
+                foundation makes a difference and how the flexibility of our
+                product drives success.
+              </p>
+              {/* <div className="flex gap-1 items-center mt-[30px]">
               <DemoButton />
               <button className="btn btn-text gap-1">
                 <span>Learn more</span>
                 <ArrowIcon className="h-5 w-5" />
               </button>
             </div> */}
-          </div>
-
-          <div className="flex justify-center mt-16">
-            <div className="size-[250px] md:size-[420px] relative">
-              {/* Increased size only for md and up */}
-              <div className="absolute inset-0">
-                <Orbit className="size-full" />{" "}
-                {/* Outer Orbit remains full size */}
-              </div>
-              <div className="absolute-center">
-                <Orbit className="size-[180px] md:size-[250px]" />{" "}
-                {/* Increased inner Orbit size for md and up */}
-              </div>
-              <div className="absolute-center">
-                <Image
-                  src={Logo}
-                  width={100} // Default width for mobile
-                  height={100} // Default height for mobile
-                  alt="logo"
-                  className="size-16 md:size-24" // Increased size for md and up
-                />
-              </div>
-              {logos.map(({ src, alt, rotate }) => (
-                <motion.div
-                  className="absolute inset-0"
-                  initial={{ rotate: rotate }}
-                  animate={{
-                    rotate: [
-                      rotate,
-                      rotate + 45,
-                      rotate + 45,
-                      rotate + 90,
-                      rotate + 90,
-                      rotate + 135,
-                      rotate + 135,
-                      rotate + 180,
-                      rotate + 180,
-                      rotate + 225,
-                      rotate + 225,
-                      rotate + 270,
-                      rotate + 270,
-                      rotate + 315,
-                      rotate + 315,
-                      rotate + 360,
-                      rotate + 360,
-                    ],
-                  }}
-                  transition={{ duration: 20, repeat: Infinity }}
-                  key={alt}
-                >
-                  <motion.div
-                    className="inline-flex size-8 md:size-14 items-center justify-center border-blue-300 rounded-lg absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-0 bg-gray-950"
-                    initial={{
-                      translate: "-50% -50%",
-                      rotate: -rotate,
-                    }}
-                    animate={{
-                      rotate: [
-                        -rotate,
-                        -rotate - 45,
-                        -rotate - 45,
-                        -rotate - 90,
-                        -rotate - 90,
-                        -rotate - 135,
-                        -rotate - 135,
-                        -rotate - 180,
-                        -rotate - 180,
-                        -rotate - 225,
-                        -rotate - 225,
-                        -rotate - 270,
-                        -rotate - 270,
-                        -rotate - 315,
-                        -rotate - 315,
-                        -rotate - 360,
-                        -rotate - 360,
-                      ],
-                    }}
-                    transition={{ duration: 20, repeat: Infinity }}
-                  >
-                    <Image
-                      src={src}
-                      width={50} // Default width for mobile
-                      height={50} // Default height for mobile
-                      alt={alt}
-                      className="size-5 md:size-8" // Increased size for md and up
-                    />
-                  </motion.div>
-                </motion.div>
-              ))}
             </div>
           </div>
         </div>
