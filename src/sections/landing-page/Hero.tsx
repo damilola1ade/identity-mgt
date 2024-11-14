@@ -1,8 +1,7 @@
-import ArrowIcon from "@/assets/arrow-right.svg";
 import cogImage from "@/assets/cog.png";
 import cylinderImage from "@/assets/cylinder.png";
 import noodleImage from "@/assets/noodle.png";
-import { DemoButton } from "@/components";
+import { DemoButton, LearnMore } from "@/components";
 import Image from "next/image";
 
 export const Hero = () => {
@@ -24,10 +23,7 @@ export const Hero = () => {
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
               <DemoButton />
-              <button className="btn btn-text gap-1">
-                <span>Learn more</span>
-                <ArrowIcon className="h-5 w-5" />
-              </button>
+              <LearnMore />
             </div>
           </div>
 

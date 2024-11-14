@@ -7,7 +7,7 @@ import ArrowIcon from "@/assets/arrow-right.svg";
 import StarImage from "@/assets/star.png";
 import SpringImage from "@/assets/spring.png";
 
-import { DemoButton } from "@/components";
+import { DemoButton, LearnMore } from "@/components";
 
 export const CallToAction = () => {
   const sectionRef = useRef(null);
@@ -51,10 +51,7 @@ export const CallToAction = () => {
 
         <div className="flex gap-2 mt-10 justify-center">
           <DemoButton />
-          <button className="btn btn-text">
-            <span>Learn more</span>
-            <ArrowIcon className="h-5 w-5" />
-          </button>
+          <LearnMore />
         </div>
       </div>
     </section>

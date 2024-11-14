@@ -12,8 +12,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "./ui/textarea";
-
-import { Button } from "./Button";
+import { Button } from "./ui/button";
 
 export const DemoButton = () => {
   return (
