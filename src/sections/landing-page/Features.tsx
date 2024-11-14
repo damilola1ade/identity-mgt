@@ -86,14 +86,14 @@ export const Features = () => {
           </div>
 
           <div className="flex justify-center mt-16">
-            <div className="size-[200px] md:size-[420px] relative">
+            <div className="size-[250px] md:size-[420px] relative">
               {/* Increased size only for md and up */}
               <div className="absolute inset-0">
                 <Orbit className="size-full" />{" "}
                 {/* Outer Orbit remains full size */}
               </div>
               <div className="absolute-center">
-                <Orbit className="size-[150px] md:size-[250px]" />{" "}
+                <Orbit className="size-[180px] md:size-[250px]" />{" "}
                 {/* Increased inner Orbit size for md and up */}
               </div>
               <div className="absolute-center">
@@ -134,7 +134,7 @@ export const Features = () => {
                   key={alt}
                 >
                   <motion.div
-                    className="inline-flex size-10 md:size-14 items-center justify-center border-blue-300 rounded-lg absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-0 bg-gray-950"
+                    className="inline-flex size-8 md:size-14 items-center justify-center border-blue-300 rounded-lg absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-0 bg-gray-950"
                     initial={{
                       translate: "-50% -50%",
                       rotate: -rotate,
@@ -167,7 +167,7 @@ export const Features = () => {
                       width={50} // Default width for mobile
                       height={50} // Default height for mobile
                       alt={alt}
-                      className="size-6 md:size-8" // Increased size for md and up
+                      className="size-5 md:size-8" // Increased size for md and up
                     />
                   </motion.div>
                 </motion.div>
