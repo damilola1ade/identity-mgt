@@ -6,7 +6,7 @@ import { DemoButton } from "@/components";
 
 export const Navbar = () => {
   return (
-    <header className="fixed w-full top-0 backdrop-blur-[5px] z-20">
+    <header className="bg-white lg:bg-transparent sticky top-0 backdrop-blur-[5px] z-20">
       <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
         <p className="text-white/60 hidden md:block">
           Streamline your workflow and boost your productivity
@@ -17,7 +17,7 @@ export const Navbar = () => {
         </div>
       </div>
 
-      <div className="py-2">
+      <div className="py-5">
         <div className="container">
           <div className="flex items-center justify-between">
             <Image src={Logo} alt="logo" height={40} width={40} />
