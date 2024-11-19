@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { DemoButton, Orbit, LearnMore } from "@/components";
 import Image from "next/image";
 import Logo from "@/assets/logosaas.png";
@@ -65,12 +66,10 @@ export const Hero = () => {
               Version 2.0 is here
             </div> */}
             <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text mt-6">
-              Empower Secure Identity
+              Building Foundational Security
             </h1>
             <p className="text-xl text-[#010DE3] tracking-tight mt-6">
-              Securely manage and govern user identities with solutions that
-              ensure compliance, improve security, and streamline access across
-              your organization.
+              Identity Governance and Administration is the foundational component of any organization's cybersecurity tech stack. Let us provide a secure, compliant and streamlined experience for all your employees.
             </p>
             <div className="flex gap-1 items-center mt-[30px]">
               <DemoButton />
